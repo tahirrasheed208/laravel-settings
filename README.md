@@ -41,8 +41,6 @@ You can change the options of your app from `config/settings.php` file
 
 ## Usage
 
-You can either the helper method like `setting()->get('foo')`
-
 ```php
 setting()->get('foo');
 setting()->put('foo', 'bar');
