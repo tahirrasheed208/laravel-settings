@@ -30,5 +30,9 @@ class LaravelSettingsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
+        $this->publishes([
+            __DIR__.'/../config/settings.php' => config_path('settings.php'),
+        ], 'settings');
     }
 }
