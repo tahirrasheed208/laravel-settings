@@ -13,6 +13,10 @@ class LaravelSettingsServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/settings.php', 'settings'
+        );
+
         $this->app->singleton('setting', function () {
             return new SettingHelper();
         });
