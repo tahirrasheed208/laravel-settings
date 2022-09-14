@@ -1,7 +1,7 @@
 # Settings package for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/tahirrasheed208/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
+[![Total Downloads](https://img.shields.io/packagist/dt/tahirrasheed208/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
 
 This package allows you to save settings in DB & Cache. You can use helper function to get settings value anywhere within laravel.
 
