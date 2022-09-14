@@ -19,7 +19,7 @@ class SettingHelper
         $cache = $this->getFromCache($option_name);
 
         if ($cache) {
-            return $cache['data'];
+            return $cache;
         }
 
         $option = Setting::whereOptionName($option_name)->first();
