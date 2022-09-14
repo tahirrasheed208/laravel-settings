@@ -4,7 +4,7 @@ namespace TahirRasheed\LaravelSettings;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelSettingsServiceProvider extends ServiceProvider
+class SettingsServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
