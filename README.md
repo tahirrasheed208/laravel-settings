@@ -41,10 +41,20 @@ You can change the options of your app from `config/settings.php` file
 
 ## Usage
 
+### Helper
+
 ```php
 setting()->get('foo');
 setting()->put('foo', 'bar');
 setting()->delete('foo');
+```
+
+### Facade
+
+```php
+Setting::get('foo');
+Setting::put('foo', 'bar');
+Setting::delete('foo');
 ```
 
 ## Changelog
