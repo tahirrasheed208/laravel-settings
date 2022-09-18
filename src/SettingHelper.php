@@ -12,9 +12,10 @@ class SettingHelper
      * Get setting option value.
      *
      * @param  string  $option_name
+     * @param  mixed  $default
      * @return mixed|void
      */
-    public function get(string $option_name)
+    public function get(string $option_name, $default = null)
     {
         $cache = $this->getFromCache($option_name);
 
@@ -24,6 +25,10 @@ class SettingHelper
 
         $option = Setting::whereOptionName($option_name)->first();
         $value = optional($option)->option_value;
+
+        if ($default && !$value) {
+            return $default;
+        }
 
         $this->saveInCache($option_name, $value);
 
