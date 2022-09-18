@@ -45,6 +45,7 @@ You can change the options of your app from `config/settings.php` file
 
 ```php
 setting()->get('foo');
+setting()->get('foo', 'default');
 setting()->put('foo', 'bar');
 setting()->delete('foo');
 ```
@@ -53,6 +54,7 @@ setting()->delete('foo');
 
 ```php
 Setting::get('foo');
+Setting::get('foo', 'default');
 Setting::put('foo', 'bar');
 Setting::delete('foo');
 ```
@@ -67,7 +69,7 @@ Pull requests are more than welcome. You must follow the PSR coding standards.
 
 ## Security
 
-If you discover any security related issues, please email tahirrasheed208@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please email tahirrasheedhtr@gmail.com instead of using the issue tracker.
 
 ## License
 
