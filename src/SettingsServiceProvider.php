@@ -33,6 +33,6 @@ class SettingsServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/settings.php' => config_path('settings.php'),
-        ], 'settings');
+        ], 'config');
     }
 }

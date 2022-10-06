@@ -24,7 +24,7 @@ composer require tahirrasheed208/laravel-settings
 Publish config file.
 
 ```bash
-php artisan vendor:publish --tag=settings
+php artisan vendor:publish --provider="TahirRasheed\LaravelSettings\SettingsServiceProvider" --tag=config
 ```
 
 ### 3. Database
