@@ -1,6 +1,7 @@
 # Settings package for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tahirrasheed208/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/tahirrasheed208/laravel-settings/run-tests?label=tests)
 [![Total Downloads](https://img.shields.io/packagist/dt/tahirrasheed208/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
 
 This package allows you to save settings in DB & Cache. You can use helper function to get settings value anywhere within laravel.
@@ -57,6 +58,12 @@ Setting::get('foo');
 Setting::get('foo', 'default');
 Setting::put('foo', 'bar');
 Setting::delete('foo');
+```
+
+## Testing
+
+```bash
+./vendor/bin/phpunit
 ```
 
 ## Changelog
