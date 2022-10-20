@@ -78,8 +78,8 @@ class SettingHelper
         }
 
         $media = (new MediaUploadForSetting)
-            ->disk(config('medialibrary.laravel_settings.disk'))
-            ->collection(config('medialibrary.laravel_settings.collection'))
+            ->useDisk(config('medialibrary.laravel_settings.disk'))
+            ->toMediaCollection(config('medialibrary.laravel_settings.collection'))
             ->handle($request, $file_name, $option_name);
 
         if (
