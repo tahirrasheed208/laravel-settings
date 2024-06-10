@@ -1,7 +1,7 @@
 # Settings package for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tahirrasheed208/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/tahirrasheed208/laravel-settings/run-tests?label=tests)
+[![Build Status](https://github.com/tahirrasheed208/laravel-settings/actions/workflows/run-tests.yml/badge.svg)](https://github.com/tahirrasheed208/laravel-settings/actions)
 [![Total Downloads](https://img.shields.io/packagist/dt/tahirrasheed208/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/tahirrasheed208/laravel-settings)
 
 This package allows you to save settings in DB & Cache. You can use helper function to get settings value anywhere within laravel.
@@ -25,12 +25,18 @@ composer require tahirrasheed208/laravel-settings
 Publish config file.
 
 ```bash
-php artisan vendor:publish --provider="TahirRasheed\LaravelSettings\SettingsServiceProvider" --tag=config
+php artisan vendor:publish --provider="TahirRasheed\LaravelSettings\SettingsServiceProvider" --tag=settings-config
 ```
 
-### 3. Database
+### 3. Preparing the database
 
-Create table in database.
+You need to publish the migration to create the media table:
+
+```bash
+php artisan vendor:publish --provider="TahirRasheed\LaravelSettings\SettingsServiceProvider" --tag=settings-migration
+```
+
+After that, you need to run migrations.
 
 ```bash
 php artisan migrate
