@@ -13,9 +13,11 @@ class SettingsServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/settings.php', 'settings'
-        );
+        if (! app()->configurationIsCached()) {
+            $this->mergeConfigFrom(
+                __DIR__.'/../config/settings.php', 'settings'
+            );
+        }
 
         $this->app->singleton('setting', function () {
             return new SettingHelper();
@@ -29,12 +31,14 @@ class SettingsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../config/settings.php' => config_path('settings.php'),
-        ], 'settings-config');
+        if (app()->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/settings.php' => config_path('settings.php'),
+            ], 'settings-config');
 
-        $this->publishesMigrations([
-            __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], 'settings-migration');
+            $this->publishesMigrations([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], 'settings-migration');
+        }
     }
 }
