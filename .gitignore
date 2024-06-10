@@ -1,7 +1,9 @@
 /node_modules
 /docs
 /vendor
-.phpunit.result.cache
+/.phpunit.result.cache
+/.phpunit.cache
+composer.lock
 npm-debug.log
 yarn-error.log
 /.idea
